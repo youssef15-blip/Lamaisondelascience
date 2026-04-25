@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initSmoothScroll();
     initEmailJS();
-    initShortsAutoplay();
+    initVideoAutoplay();
     initShortsSlider();
 });
 
@@ -136,8 +136,8 @@ function initScrollAnimations() {
     });
 }
 
-function initShortsAutoplay() {
-    const shortVideos = document.querySelectorAll('.short-container video');
+function initVideoAutoplay() {
+    const videos = document.querySelectorAll('video');
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
@@ -152,10 +152,11 @@ function initShortsAutoplay() {
         threshold: 0.5
     });
     
-    shortVideos.forEach(video => {
+    videos.forEach(video => {
         observer.observe(video);
     });
     
+    // Keep mute toggle functionality for shorts only
     document.querySelectorAll('.mute-toggle').forEach(toggle => {
         toggle.addEventListener('click', function(e) {
             e.stopPropagation();
