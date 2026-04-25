@@ -1073,6 +1073,8 @@ footer {
     .btn-primary {
         padding: 0.9rem 1.5rem;
         font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links {
@@ -1120,6 +1122,7 @@ footer {
     form textarea {
         padding: 1rem;
         font-size: 0.95rem;
+        width: 100%;
     }
 
     .contact-container {
