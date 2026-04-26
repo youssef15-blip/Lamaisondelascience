@@ -579,8 +579,8 @@ h2::after {
 }
 
 .short-card {
-    flex: 0 0 calc(33.333% - 1.333rem);
-    max-width: calc(33.333% - 1.333rem);
+    flex: 0 0 calc(28% - 1.333rem);
+    max-width: calc(28% - 1.333rem);
     min-width: 0;
 }
 
@@ -1324,9 +1324,8 @@ footer {
     }
 
     .short-card {
-        flex: 0 0 calc(100% - 0.5rem) !important;
-        max-width: calc(100% - 0.5rem) !important;
-        min-width: 0 !important;
+        flex: 0 0 calc(32% - 1.333rem);
+        max-width: calc(32% - 1.333rem);
     }
 
     .shorts-slider-container {
