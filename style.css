@@ -733,6 +733,74 @@ h2::after {
     line-height: 1.6;
 }
 
+/* Compteurs */
+.counters {
+    background: linear-gradient(135deg, #fffbf0 0%, #f0e6d2 100%);
+    padding: 6rem 3rem;
+}
+
+.counters h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    background: var(--gradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.counters h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--gradient2);
+    border-radius: 3px;
+}
+
+.counters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.counter {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.counter:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.counter h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: var(--gradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.counter p {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
 /* Shorts */
 .shorts-slider-container {
     position: relative;
