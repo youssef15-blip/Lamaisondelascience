@@ -125,7 +125,7 @@ function initScrollAnimations() {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 100);
+                }, index * 300);
                 observer.unobserve(entry.target);
             }
         });
@@ -267,19 +267,27 @@ function initShortsSlider() {
 function initParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
+
+    const icons = ['🚀', '⚗️', '🔬', '🌋', '⚡', '🧪'];
     
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 40; i++) {
         const particle = document.createElement('div');
+        const icon = icons[Math.floor(Math.random() * icons.length)];
+        const size = Math.random() * 25 + 22;
+        
+        particle.innerHTML = icon;
         particle.style.cssText = `
             position: absolute;
-            width: ${Math.random() * 6 + 2}px;
-            height: ${Math.random() * 6 + 2}px;
-            background: rgba(255,255,255,${Math.random() * 0.5 + 0.1});
-            border-radius: 50%;
+            font-size: ${size}px;
             left: ${Math.random() * 100}%;
             top: ${Math.random() * 100}%;
-            animation: particleFloat ${Math.random() * 10 + 10}s linear infinite;
+            animation: particleFloat ${Math.random() * 15 + 10}s linear infinite;
             animation-delay: ${Math.random() * 5}s;
+            opacity: ${Math.random() * 0.6 + 0.4};
+            pointer-events: none;
+            user-select: none;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+            z-index: 1;
         `;
         particlesContainer.appendChild(particle);
     }
@@ -287,10 +295,20 @@ function initParticles() {
     const style = document.createElement('style');
     style.textContent = `
         @keyframes particleFloat {
-            0% { transform: translateY(0) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) translateX(${Math.random() * 100 - 50}px); opacity: 0; }
+            0% { 
+                transform: translateY(0) translateX(${Math.random() * 100 - 50}px) rotate(0deg); 
+                opacity: 0; 
+            }
+            10% { 
+                opacity: ${Math.random() * 0.5 + 0.4}; 
+            }
+            90% { 
+                opacity: ${Math.random() * 0.5 + 0.4}; 
+            }
+            100% { 
+                transform: translateY(-100vh) translateX(${Math.random() * 200 - 100}px) rotate(${Math.random() * 720 - 360}deg); 
+                opacity: 0; 
+            }
         }
     `;
     document.head.appendChild(style);
