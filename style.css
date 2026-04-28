@@ -1237,9 +1237,17 @@ footer {
         padding: 4rem 1.5rem;
     }
 
-    .shows-grid, .features {
+    .shows-grid, .features, .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .temoignages {
+        padding: 4rem 1.5rem;
+    }
+
+    .testimonial-card {
+        padding: 2rem 1.5rem;
     }
 
     .logo img {
@@ -1391,15 +1399,19 @@ footer {
         padding: 3rem 1rem;
     }
 
-    .show-card, .video-card {
-        padding: 1.5rem;
-    }
+     .show-card, .video-card, .testimonial-card {
+         padding: 1.5rem;
+     }
 
-    .short-card {
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
+     .temoignages {
+         padding: 3rem 1rem;
+     }
+
+     .short-card {
+         flex: 0 0 100%;
+         max-width: 100%;
+         min-width: 0;
+     }
 
     .shorts-slider-container {
         padding: 0 25px;
@@ -1563,14 +1575,18 @@ footer {
         padding: 3rem 1rem;
     }
 
-    .show-card, .video-card {
-        padding: 1.5rem;
-    }
+     .show-card, .video-card, .testimonial-card {
+         padding: 1.5rem;
+     }
 
-    .short-card {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+     .temoignages {
+         padding: 3rem 1rem;
+     }
+
+     .short-card {
+         flex: 0 0 100%;
+         max-width: 100%;
+     }
 
     .shorts-slider-container {
         padding: 0 25px;
